@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 const poppins = localFont({
   src: "./fonts/Poppins-Regular.ttf",
   variable: "--font-poppins",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={` ${outfit.variable} ${poppins.variable}  ${play.variable} antialiased`}
       >
+         <Toaster />
         {children}
       </body>
     </html>

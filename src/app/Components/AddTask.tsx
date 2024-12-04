@@ -9,7 +9,7 @@ const AddTask: React.FC<{
 }> = ({ setShowAddTask, showAddTask }) => {
   return (
     <div
-      className=" flex  items-center gap-7 bg-peach h-20 px-3 rounded-xl cursor-pointer"
+      className=" flex  items-center gap-7 bg-peach h-20 px-3 py-4 rounded-xl cursor-pointer mb-2 shadow-md"
       onClick={() => setShowAddTask(!showAddTask)}
     >
       <div className=" h-12 w-12 rounded-xl bg-orange  flex justify-center items-center">

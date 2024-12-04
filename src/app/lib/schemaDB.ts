@@ -1,24 +1,23 @@
-import { UUID } from "crypto";
 import Dexie from "dexie";
 
 
 
 interface Task {
-    id: UUID
+    id: number
     created_at: string
-    is_complete: boolean | null
-    task: string | null
-    description: string | null
-    tag: string | null
+    status: string
+    task: string
+    description: string
+    tag: string
 }
 
 
 const db = new Dexie("TaskListDB") as Dexie & {
-    tasks: Dexie.Table<Task, UUID>;
+    tasks: Dexie.Table<Task, number>;
 };
 
 db.version(1).stores({
-    tasks: "++id, created_at, is_complete, task, description, tag"
+    tasks: "++id, created_at, status, task, description, tag"
 })
 
 export default db;
