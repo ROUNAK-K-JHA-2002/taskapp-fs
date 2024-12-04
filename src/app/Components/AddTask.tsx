@@ -1,7 +1,7 @@
 "use client";
 import { AddRoundDuotone } from "@/assets";
 import Image from "next/image";
-import React, { FC } from "react";
+import React from "react";
 
 const AddTask: React.FC<{
   setShowAddTask: (value: boolean) => void;
